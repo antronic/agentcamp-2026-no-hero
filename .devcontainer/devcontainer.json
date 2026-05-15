@@ -19,7 +19,8 @@
         "ritwickdey.LiveServer",
         "oven.bun-vscode",
         "ms-azuretools.vscode-azurefunctions",
-        "ms-vscode.azurecli"
+        "ms-vscode.azurecli",
+        "bierner.markdown-mermaid"
       ]
     }
   }
