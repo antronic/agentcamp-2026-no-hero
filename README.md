@@ -1,4 +1,4 @@
-# 🤖 Unlock Your Agent's Potential with MCP
+# No Hero Needed: Give AI Agents Hands with Microsoft Foundry, MongoDB, and MCP
 
 > **AgentCon 2026 Workshop** — Build MCP servers using TypeScript and connect them with Azure AI Foundry.
 
