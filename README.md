@@ -2,6 +2,8 @@
 
 > **AgentCon 2026 Workshop** — Build MCP servers using TypeScript and connect them with Azure AI Foundry.
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/antronic/agentcamp-2026-no-hero)
+
 ## What You'll Learn
 
 In this hands-on workshop, you'll progressively build up from simple tool calling to a full e-commerce chatbot — learning **Model Context Protocol (MCP)** along the way.
