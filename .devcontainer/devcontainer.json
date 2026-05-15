@@ -4,9 +4,6 @@
     "dockerfile": "Dockerfile",
     "context": ".."
   },
-  "features": {
-    "ghcr.io/devcontainers/features/azure-cli:1": {}
-  },
   "forwardPorts": [
     9000,
     9001,
