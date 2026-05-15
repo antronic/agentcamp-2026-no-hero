@@ -16,7 +16,8 @@ interface Message {
   content: string
 }
 
-const API_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:9000'
+// Vite proxies /api/* → http://localhost:9000/* (see vite.config.ts)
+const API_BASE = '/api'
 
 interface ChatWindowProps {
   onClose: () => void
@@ -45,7 +46,7 @@ export function ChatWindow({ onClose, onMinimize }: ChatWindowProps) {
     setLoading(true)
 
     try {
-      const res = await fetch(`${API_URL}/chat`, {
+      const res = await fetch(`${API_BASE}/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: text }),

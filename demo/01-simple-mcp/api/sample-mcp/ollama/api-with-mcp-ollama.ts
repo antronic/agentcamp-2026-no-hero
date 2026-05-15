@@ -186,8 +186,12 @@ async function callOllama(messages: any[], tools: any[]) {
  * 7. Elysia API — /chat endpoint
  *    Flow: user message → Ollama (first call) → dispatch tool calls via MCP client → Ollama (final call) → reply
  */
+// Resolve the path to index.html (two levels up from sample-mcp/ollama/)
+const UI_HTML = import.meta.dir + '/../../../index.html';
+
 new Elysia()
   .use(cors())
+  .get('/', () => Bun.file(UI_HTML))
   .post('/chat', async ({ body }) => {
     const { message } = body as { message: string };
 

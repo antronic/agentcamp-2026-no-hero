@@ -70,7 +70,7 @@ agentcon-2026/
 └── demo/
     ├── 01-simple-mcp/                  # Tool calling with/without MCP
     │   ├── README.md
-    │   ├── ui.html                     # Simple chat UI (Live Server)
+    │   ├── index.html                   # Chat UI (served by each API sample at /)
     │   └── api/                        # 4 sample servers (aoai × ollama × mcp)
     ├── 02-simple-rag/                  # RAG pipeline with Vector Search
     │   ├── README.md
@@ -100,7 +100,7 @@ curl -X POST http://localhost:9000/chat \
   -d '{"message": "How many units of GAD-001 are left at BKK-SILOM?"}'
 ```
 
-Then open `ui.html` with **Live Server** for a simple chat interface.
+Open http://localhost:9000 for the chat UI (served by the API).
 
 See each demo's README for detailed instructions.
 

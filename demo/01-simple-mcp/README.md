@@ -58,9 +58,7 @@ flowchart LR
 ```
 01-simple-mcp/
 ├── README.md
-├── index.html                           # Chat UI (served by Vite, uses /api/chat)
-├── package.json                         # Vite dev server (proxy /api → port 9000)
-├── vite.config.ts                       # Vite proxy configuration
+├── index.html                           # Chat UI (served by each API sample at /)
 └── api/
     ├── package.json
     ├── data/
@@ -89,9 +87,8 @@ flowchart LR
 ### 1. Install Dependencies
 
 ```bash
-cd demo/01-simple-mcp
-bun install            # Vite (UI dev server)
-cd api && bun install  # API dependencies
+cd demo/01-simple-mcp/api
+bun install
 ```
 
 ### 2. Configure Environment (Azure OpenAI only)
@@ -132,35 +129,18 @@ cd demo/01-simple-mcp/api/sample-mcp/ollama
 bun run api-with-mcp-ollama.ts
 ```
 
-### 4. Start the UI (Vite dev server)
+### 4. Test
 
-In a **separate terminal:**
+**Using the UI:**
 
-```bash
-cd demo/01-simple-mcp
-bun run dev            # → http://localhost:5173
-```
+Open http://localhost:9000 — the API server serves `index.html` at `/`.
 
-Vite proxies `/api/*` requests to the API server on port 9000, so no CORS issues.
-
-Open http://localhost:5173 to use the chat UI.
-
-### 5. Test
-
-**Using curl (directly to API):**
+**Using curl:**
 
 ```bash
 curl -X POST http://localhost:9000/chat \
   -H "Content-Type: application/json" \
   -d '{"message": "How many units of GAD-001 are left at BKK-SILOM?"}'
-```
-
-**Using curl (via Vite proxy):**
-
-```bash
-curl -X POST http://localhost:5173/api/chat \
-  -H "Content-Type: application/json" \
-  -d '{"message": "What is the status of order ORD-002?"}'
 ```
 
 ## Available Tools

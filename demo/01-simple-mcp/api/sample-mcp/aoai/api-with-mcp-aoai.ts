@@ -191,8 +191,12 @@ async function callAzureOpenAI(
 /**
  * 7. Elysia API
  */
+// Resolve the path to index.html (two levels up from sample-mcp/aoai/)
+const UI_HTML = import.meta.dir + '/../../../index.html';
+
 new Elysia()
   .use(cors())
+  .get('/', () => Bun.file(UI_HTML))
   .post('/chat', async ({ body }) => {
     const { message } = body as { message: string };
 

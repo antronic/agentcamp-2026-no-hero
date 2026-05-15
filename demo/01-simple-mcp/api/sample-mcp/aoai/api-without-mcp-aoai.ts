@@ -152,8 +152,12 @@ async function callAzureOpenAI(messages: OpenAI.ChatCompletionMessageParam[]) {
  * 5. Elysia API — /chat endpoint
  *    Flow: user message → Azure OpenAI (first call) → execute tool calls → Azure OpenAI (final call) → reply
  */
+// Resolve the path to index.html (two levels up from sample-mcp/aoai/)
+const UI_HTML = import.meta.dir + '/../../../index.html';
+
 new Elysia()
   .use(cors())
+  .get('/', () => Bun.file(UI_HTML))
   .post('/chat', async ({ body }) => {
     const { message } = body as { message: string };
 
