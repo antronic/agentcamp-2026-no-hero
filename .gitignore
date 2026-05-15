@@ -1,0 +1,8 @@
+node_modules/
+.ai_input
+.cursor
+.sample*
+
+.env
+.env.*
+!.env.example

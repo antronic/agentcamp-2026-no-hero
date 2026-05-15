@@ -1,0 +1,10 @@
+{
+  "name": "03-simple-ecommerence-chat",
+  "private": true,
+  "scripts": {
+    "dev:api": "cd api && bun run --env-file .env --watch server.ts",
+    "dev:mcp": "cd api && bun run --env-file .env --watch mcp-server.ts",
+    "dev:ui": "cd ui && bun run dev",
+    "seed": "cd api && bun run --env-file .env seed-db.ts"
+  }
+}

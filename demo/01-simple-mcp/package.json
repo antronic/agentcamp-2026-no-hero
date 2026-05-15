@@ -1,0 +1,11 @@
+{
+  "name": "01-simple-mcp",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "install:api": "cd api && bun install"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  }
+}

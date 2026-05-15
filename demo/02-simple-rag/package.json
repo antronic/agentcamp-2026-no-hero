@@ -1,0 +1,14 @@
+{
+  "name": "02-simple-rag",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "mongodb": "^7.2.0",
+    "openai": "^6.37.0"
+  }
+}

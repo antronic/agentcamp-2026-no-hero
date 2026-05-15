@@ -1,0 +1,22 @@
+{
+  "name": "Unlock your Agents Potential with MCP",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "forwardPorts": [
+    9000,
+    9001,
+    5173
+  ],
+  "postCreateCommand": "cd demo/01-simple-mcp && bun install && cd api && bun install && cd ../../02-simple-rag && bun install && cd ../03-simple-ecommerence-chat/api && bun install && cd ../ui && bun install",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ritwickdey.LiveServer",
+        "oven.bun-vscode",
+        "ms-azuretools.vscode-azurefunctions"
+      ]
+    }
+  }
+}
